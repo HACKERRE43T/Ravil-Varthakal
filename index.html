@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raavil Varthakal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="intro" class="intro">
+        <h1>Welcome to Raavil Varthakal</h1>
+        <p>Thrilling news delivered to you.</p>
+        <p class="powered-by">Powered by Right Solution</p>
+    </div>
+
+    <nav>
+        <div class="main-nav container flex">
+            <a onclick="reload()" href="#" class="company-logo">Ravil Varthakal</a>
+            <div class="nav-link">
+                <ul class="flex">
+                    <li class="hover-link nav-item" id="ipl" onclick="onNavItemClick('ipl')">
+                        IPL
+                    </li>
+                    <li class="hover-link nav-item" id="finance"  onclick="onNavItemClick('finance')">
+                        Finance
+                    </li>
+                    <li class="hover-link nav-item" id="politics"  onclick="onNavItemClick('politics')">
+                        Politics
+                    </li>
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input id="search-text" type="text" class="news-input" placeholder="e.g. Science">
+                <button id="search-button" class="search-button">Search</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+            
+        </div>
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+                <p class="news-desc" id="news-desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga esse in dolorum consequatur. Ea autem facilis quibusdam eum, porro maiores, totam consequuntur reprehenderit quod, laboriosam quia inventore saepe fuga non!
+                </p>
+            </div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+    <script>
+        // Wait for the DOM to load
+        window.addEventListener('DOMContentLoaded', (event) => {
+            // Fade out the intro after a few seconds
+            setTimeout(() => {
+                document.getElementById('intro').style.opacity = 0;
+                setTimeout(() => {
+                    document.getElementById('intro').style.display = 'none';
+                }, 500);
+            }, 3000); // Show intro for 3 seconds
+        });
+    </script>
+</body>
+</html>
